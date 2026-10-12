@@ -65,38 +65,112 @@
   </div>
 
   <div class="reel-stage">
-    <ul class="reel-track" id="reelTrack" data-stagger aria-label="Video reels, swipe or use the arrow buttons">
-      <li class="reel-slide" data-video="videos/North%20City%20Roofing%20Team.mp4" data-poster="videos/posters/north-city-roofing-team.jpg" data-title="North City Roofing Team" data-tag="North City Roofing · Short-form ad" data-desc="Vertical short-form video ad featuring the North City Roofing team.">
-        <button class="reel-card" type="button" aria-haspopup="dialog" aria-label="Play North City Roofing Team — video 1 of 2">
-          <span class="reel-media">
-            <img class="reel-poster" alt="" width="540" height="960" decoding="async" draggable="false">
-            <video class="reel-preview" muted playsinline preload="none" tabindex="-1" aria-hidden="true" disablepictureinpicture></video>
-          </span>
-          <span class="reel-chip" aria-hidden="true">01</span>
-          <span class="reel-overlay" aria-hidden="true"><span class="reel-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 001.5.86l11-6.5a1 1 0 000-1.72l-11-6.5A1 1 0 008 5.5z"/></svg></span><span class="reel-ov-title">North City Roofing Team</span></span>
-        </button>
-        <div class="reel-caption">
-          <span class="reel-tag">North City Roofing · Short-form ad</span>
-          <h3>North City Roofing Team</h3>
-          <p>Vertical short-form video ad featuring the North City Roofing team.</p>
-        </div>
-      </li>
-      <li class="reel-slide" data-video="videos/60%20Second%20Book.mp4" data-poster="videos/posters/60-second-book.jpg" data-title="60 Second Book" data-tag="North City Roofing · Short-form ad" data-desc="Vertical short-form video ad for North City Roofing.">
-        <button class="reel-card" type="button" aria-haspopup="dialog" aria-label="Play 60 Second Book — video 2 of 2">
-          <span class="reel-media">
-            <img class="reel-poster" alt="" width="540" height="960" decoding="async" draggable="false">
-            <video class="reel-preview" muted playsinline preload="none" tabindex="-1" aria-hidden="true" disablepictureinpicture></video>
-          </span>
-          <span class="reel-chip" aria-hidden="true">02</span>
-          <span class="reel-overlay" aria-hidden="true"><span class="reel-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 001.5.86l11-6.5a1 1 0 000-1.72l-11-6.5A1 1 0 008 5.5z"/></svg></span><span class="reel-ov-title">60 Second Book</span></span>
-        </button>
-        <div class="reel-caption">
-          <span class="reel-tag">North City Roofing · Short-form ad</span>
-          <h3>60 Second Book</h3>
-          <p>Vertical short-form video ad for North City Roofing.</p>
-        </div>
-      </li>
-    </ul>
+    ```html
+<ul class="reel-track" id="reelTrack" data-stagger aria-label="Video reels, swipe or use the arrow buttons">
+
+  <!-- VIDEO 1: NORTH CITY ROOFING TEAM -->
+  <li class="reel-slide"
+      data-video="videos/North%20City%20Roofing%20Team.mp4"
+      data-poster="videos/North%20City%20Roofing%20Team%20Cover.jpg"
+      data-title="North City Roofing Team"
+      data-tag="North City Roofing · Short-form ad"
+      data-desc="Vertical short-form video ad featuring the North City Roofing team.">
+
+    <button class="reel-card" type="button" aria-haspopup="dialog"
+            aria-label="Play North City Roofing Team — video 1 of 2">
+
+      <span class="reel-media">
+        <img
+          class="reel-poster"
+          src="videos/North%20City%20Roofing%20Team%20Cover.jpg"
+          alt="North City Roofing Team video cover"
+          width="540"
+          height="960"
+          loading="lazy"
+          decoding="async"
+          draggable="false">
+
+        <video class="reel-preview"
+               muted
+               playsinline
+               preload="none"
+               tabindex="-1"
+               aria-hidden="true"
+               disablepictureinpicture></video>
+      </span>
+
+      <span class="reel-chip" aria-hidden="true">01</span>
+
+      <span class="reel-overlay" aria-hidden="true">
+        <span class="reel-play">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5.5v13a1 1 0 001.5.86l11-6.5a1 1 0 000-1.72l-11-6.5A1 1 0 008 5.5z"/>
+          </svg>
+        </span>
+        <span class="reel-ov-title">North City Roofing Team</span>
+      </span>
+    </button>
+
+    <div class="reel-caption">
+      <span class="reel-tag">North City Roofing · Short-form ad</span>
+      <h3>North City Roofing Team</h3>
+      <p>Vertical short-form video ad featuring the North City Roofing team.</p>
+    </div>
+  </li>
+
+
+  <!-- VIDEO 2: 60 SECOND BOOK -->
+  <li class="reel-slide"
+      data-video="videos/60%20Second%20Book.mp4"
+      data-poster="videos/60%20Second%20Book%20Cover.jpg"
+      data-title="60 Second Book"
+      data-tag="North City Roofing · Short-form ad"
+      data-desc="Vertical short-form video ad for North City Roofing.">
+
+    <button class="reel-card" type="button" aria-haspopup="dialog"
+            aria-label="Play 60 Second Book — video 2 of 2">
+
+      <span class="reel-media">
+        <img
+          class="reel-poster"
+          src="videos/60%20Second%20Book%20Cover.jpg"
+          alt="60 Second Book video cover"
+          width="540"
+          height="960"
+          loading="lazy"
+          decoding="async"
+          draggable="false">
+
+        <video class="reel-preview"
+               muted
+               playsinline
+               preload="none"
+               tabindex="-1"
+               aria-hidden="true"
+               disablepictureinpicture></video>
+      </span>
+
+      <span class="reel-chip" aria-hidden="true">02</span>
+
+      <span class="reel-overlay" aria-hidden="true">
+        <span class="reel-play">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5.5v13a1 1 0 001.5.86l11-6.5a1 1 0 000-1.72l-11-6.5A1 1 0 008 5.5z"/>
+          </svg>
+        </span>
+        <span class="reel-ov-title">60 Second Book</span>
+      </span>
+    </button>
+
+    <div class="reel-caption">
+      <span class="reel-tag">North City Roofing · Short-form ad</span>
+      <h3>60 Second Book</h3>
+      <p>Vertical short-form video ad for North City Roofing.</p>
+    </div>
+  </li>
+
+</ul>
+```
   </div>
 
   <div class="wrap">
