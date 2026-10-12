@@ -15,6 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="reel-slider.css">
 </head>
 <body data-page="creative">
 
@@ -49,6 +50,67 @@
     <p class="sub reveal">Full-funnel creative production: paid social ads, organic posts, and video editing for service-based businesses.</p>
   </div>
 </section>
+<!-- ============================================================ REEL SLIDER: NORTH CITY ROOFING SHORT-FORM VIDEO
+     To add a reel: copy one <li class="reel-slide"> block, change data-video / data-poster / data-title / data-desc,
+     the chip number, the aria-label and the visible title/description. Everything else updates automatically. -->
+<section class="reel" id="reels" aria-roledescription="carousel" aria-label="North City Roofing short-form video reels">
+  <div class="wrap">
+    <div class="reel-head">
+      <div class="section-head reveal">
+        <span class="kicker">Short-form video · North City Roofing</span>
+        <h2 id="reelTitle">Video ads, <span class="grad-text">built to stop the scroll.</span></h2>
+        <p class="lede">Vertical short-form ads for a residential roofing brand. Open any reel to watch it with sound.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reel-stage">
+    <ul class="reel-track" id="reelTrack" data-stagger aria-label="Video reels, swipe or use the arrow buttons">
+      <li class="reel-slide" data-video="videos/North%20City%20Roofing%20Team.mp4" data-poster="videos/posters/north-city-roofing-team.jpg" data-title="North City Roofing Team" data-tag="North City Roofing · Short-form ad" data-desc="Vertical short-form video ad featuring the North City Roofing team.">
+        <button class="reel-card" type="button" aria-haspopup="dialog" aria-label="Play North City Roofing Team — video 1 of 2">
+          <span class="reel-media">
+            <img class="reel-poster" alt="" width="540" height="960" decoding="async" draggable="false">
+            <video class="reel-preview" muted playsinline preload="none" tabindex="-1" aria-hidden="true" disablepictureinpicture></video>
+          </span>
+          <span class="reel-chip" aria-hidden="true">01</span>
+          <span class="reel-overlay" aria-hidden="true"><span class="reel-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 001.5.86l11-6.5a1 1 0 000-1.72l-11-6.5A1 1 0 008 5.5z"/></svg></span><span class="reel-ov-title">North City Roofing Team</span></span>
+        </button>
+        <div class="reel-caption">
+          <span class="reel-tag">North City Roofing · Short-form ad</span>
+          <h3>North City Roofing Team</h3>
+          <p>Vertical short-form video ad featuring the North City Roofing team.</p>
+        </div>
+      </li>
+      <li class="reel-slide" data-video="videos/60%20Second%20Book.mp4" data-poster="videos/posters/60-second-book.jpg" data-title="60 Second Book" data-tag="North City Roofing · Short-form ad" data-desc="Vertical short-form video ad for North City Roofing.">
+        <button class="reel-card" type="button" aria-haspopup="dialog" aria-label="Play 60 Second Book — video 2 of 2">
+          <span class="reel-media">
+            <img class="reel-poster" alt="" width="540" height="960" decoding="async" draggable="false">
+            <video class="reel-preview" muted playsinline preload="none" tabindex="-1" aria-hidden="true" disablepictureinpicture></video>
+          </span>
+          <span class="reel-chip" aria-hidden="true">02</span>
+          <span class="reel-overlay" aria-hidden="true"><span class="reel-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 001.5.86l11-6.5a1 1 0 000-1.72l-11-6.5A1 1 0 008 5.5z"/></svg></span><span class="reel-ov-title">60 Second Book</span></span>
+        </button>
+        <div class="reel-caption">
+          <span class="reel-tag">North City Roofing · Short-form ad</span>
+          <h3>60 Second Book</h3>
+          <p>Vertical short-form video ad for North City Roofing.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="wrap">
+    <div class="reel-controls reveal">
+      <div class="reel-counter" aria-hidden="true"><b data-reel-current>01</b> / <span data-reel-total>02</span></div>
+      <div class="reel-progress" aria-hidden="true"><span class="reel-progress-thumb"></span></div>
+      <div class="reel-arrows">
+        <button class="reel-arrow" type="button" data-reel-prev aria-label="Previous video" aria-disabled="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button class="reel-arrow" type="button" data-reel-next aria-label="Next video"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================================================ CASE STUDY: REED BROTHERS -->
 <section class="section-pad rb-case" id="reed-case">
   <div class="wrap">
@@ -160,6 +222,28 @@
   </div>
 </section>
 
+<!-- ============================================================ REEL VIDEO MODAL -->
+<div class="reel-modal" id="reelModal" aria-hidden="true">
+  <div class="reel-modal-backdrop" data-reel-close></div>
+  <div class="reel-modal-panel" role="dialog" aria-modal="true" aria-labelledby="reelModalTitle" aria-describedby="reelModalDesc">
+    <button class="reel-modal-close" data-reel-close type="button" aria-label="Close video">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="reel-modal-player">
+      <video id="reelModalVideo" controls playsinline preload="none" aria-label="Video player"></video>
+      <p class="reel-modal-error" hidden>This video couldn't be loaded. Please try again in a moment.</p>
+    </div>
+    <div class="reel-modal-info">
+      <span class="reel-tag" id="reelModalTag"></span>
+      <h3 id="reelModalTitle"></h3>
+      <p id="reelModalDesc"></p>
+      <div class="reel-modal-ctas">
+        <a href="contact.html" class="btn btn-primary">Hire Me Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ============================================================ LIGHTBOX -->
 <div class="hl-modal" id="hlModal" aria-hidden="true">
   <div class="hl-modal-backdrop" data-hl-close></div>
@@ -198,5 +282,6 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="reel-slider.js"></script>
 </body>
 </html>
