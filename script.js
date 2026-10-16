@@ -1042,3 +1042,60 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     });
   });
 })();
+/* ============================================================
+   PRECISION CASE STUDY (Automation page)
+   Paste at the VERY END of script.js
+   ============================================================ */
+(function () {
+  var root = document.getElementById('precision-case');
+  if (!root) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Counters + journey line fire when scrolled into view */
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var t = e.target;
+      if (t.id === 'pcFlow') t.classList.add('in');
+      t.querySelectorAll && t.querySelectorAll('[data-pc-count]').forEach(count);
+      io.unobserve(t);
+    });
+  }, { threshold: 0.35 });
+  io.observe(document.getElementById('pcFlow'));
+  io.observe(root.querySelector('.pc-stats'));
+
+  function count(el) {
+    var end = parseFloat(el.dataset.pcCount), suf = el.dataset.suffix || '', t0 = null;
+    if (reduce) { el.textContent = end + suf; return; }
+    (function step(ts) {
+      t0 = t0 || ts;
+      var p = Math.min((ts - t0) / 1400, 1), eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(end * eased) + suf;
+      if (p < 1) requestAnimationFrame(step);
+    })(performance.now());
+  }
+
+  /* Tabs */
+  var tabs = root.querySelectorAll('[data-pc-tab]'), panels = root.querySelectorAll('[data-pc-panel]');
+  tabs.forEach(function (b) {
+    b.addEventListener('click', function () {
+      tabs.forEach(function (x) { var on = x === b; x.classList.toggle('is-on', on); x.setAttribute('aria-selected', on); });
+      panels.forEach(function (p) {
+        var on = p.dataset.pcPanel === b.dataset.pcTab;
+        p.hidden = !on; p.classList.toggle('is-on', on);
+      });
+    });
+  });
+
+  /* 3D tilt + cursor spotlight (skipped on touch / reduced motion) */
+  if (reduce || !window.matchMedia('(hover: hover)').matches) return;
+  root.addEventListener('mousemove', function (e) {
+    var c = e.target.closest('.pc-tilt'); if (!c) return;
+    var r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+    c.style.setProperty('--mx', x * 100 + '%'); c.style.setProperty('--my', y * 100 + '%');
+    c.style.transform = 'rotateY(' + (x - .5) * 7 + 'deg) rotateX(' + (.5 - y) * 7 + 'deg) translateZ(6px)';
+  });
+  root.addEventListener('mouseout', function (e) {
+    var c = e.target.closest('.pc-tilt'); if (c && !c.contains(e.relatedTarget)) c.style.transform = '';
+  });
+})();
