@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Automation — JMX | GoHighLevel, Zapier &amp; Make Workflows</title>
+<meta name="description" content="Real GoHighLevel, Zapier and Make automations by Jonathan Mendoza (JMX) — lead nurture, booking reminders, lead routing, voice AI and a full A2P case study.">
+<meta name="theme-color" content="#05050d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Automation — JMX | GoHighLevel, Zapier &amp; Make Workflows">
+<meta property="og:description" content="Real GoHighLevel, Zapier and Make automations by Jonathan Mendoza (JMX) — lead nurture, booking reminders, lead routing, voice AI and a full A2P case study.">
+<meta property="og:image" content="assets/brand/logo-jmx.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/brand/favicons/favicon-512.png">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/brand/favicons/favicon-48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicons/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/brand/favicons/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/brand/logo-nobg.png">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/automation.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="automation">
+<a class="sr-only" href="#main">Skip to content</a>
+<!-- ============================================================ LOADER -->
+<div class="loader" aria-hidden="true">
+  <div class="loader__panel loader__panel--t"></div>
+  <div class="loader__panel loader__panel--b"></div>
+  <div class="loader__orb"></div>
+  <div class="loader__inner">
+    <img class="loader__logo" src="assets/brand/logo-nobg.png" alt="" width="1836" height="827">
+    <div class="loader__bar"><i></i></div>
+    <div class="loader__meta"><span>Build what's next</span><span class="loader__pct">000%</span></div>
+  </div>
+</div>
+
+<!-- ============================================================ NAV -->
+<header class="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="JMX — home"><img src="assets/brand/logo-nobg.png" alt="JMX — Build What's Next" width="1836" height="827"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="work.html" data-page="work">Work</a>
+      <a href="automation.html" data-page="automation">Automation</a>
+      <a href="amazon.html" data-page="amazon">Amazon</a>
+      <a href="creative.html" data-page="creative">Creative</a>
+      <a href="about.html" data-page="about">About</a>
+      <a href="contact.html" data-page="contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <div class="nav-social">
+        <a href="https://www.linkedin.com/in/jonathan-mendoza-c/" target="_blank" rel="noopener" aria-label="Jonathan Mendoza on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="2.5" y="9" width="4" height="12"/><circle cx="4.5" cy="4.5" r="2.3"/><path d="M10.5 9h3.8v2.1h.05c.53-1 1.83-2.1 3.76-2.1 4.02 0 4.76 2.5 4.76 5.9V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21h-4V9z"/></svg></a>
+        <a href="https://www.facebook.com/jonathan.mendoza.7839" target="_blank" rel="noopener" aria-label="Jonathan Mendoza on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg></a>
+        <a href="https://www.instagram.com/mndz.jnthn/" target="_blank" rel="noopener" aria-label="Jonathan Mendoza on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+      <a href="contact.html" class="btn btn--primary btn--sm">Let's Connect <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============================================================ HERO · live workflow graph -->
+<section class="page-hero auto-hero">
+  <div class="page-hero__bg" aria-hidden="true"><canvas data-particles></canvas></div>
+  <div class="wrap auto-hero__grid">
+    <div>
+      <nav class="crumb" data-reveal aria-label="Breadcrumb"><a href="index.html">Home</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg><span>Automation</span></nav>
+      <h1 class="h-1" data-split>The wiring behind <span class="grad">the funnel.</span></h1>
+      <p class="lede" data-reveal>Forms, calendars, CRMs, inboxes and ad platforms — connected so leads get followed up in seconds, not days. Real builds, shown as they run inside GoHighLevel, Zapier and Make.</p>
+      <nav class="subnav" data-stagger aria-label="Jump to">
+        <a href="#precision-case"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18M7 15l4-5 3 3 5-7"/></svg>Case study</a>
+        <a href="#ghl-workflows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg>GHL Workflows</a>
+        <a href="#voice-ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="9" width="16" height="11" rx="2"/><path d="M12 9V5M8 14v1m8-1v1"/></svg>Voice AI</a>
+        <a href="#zaps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/></svg>Zaps</a>
+        <a href="#scenarios"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="2.2"/><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="12" r="2.2"/><path d="M6 8.2V18M8 6h4a4 4 0 014 4M8 18h4a4 4 0 004-4"/></svg>Scenarios</a>
+      </nav>
+    </div>
+    <div class="graph" id="graph" aria-hidden="true" data-reveal="scale">
+      <svg class="graph__wires" viewBox="0 0 400 440" preserveAspectRatio="none">
+        <defs><linearGradient id="wg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#4a43fe"/><stop offset="1" stop-color="#b44dfd"/></linearGradient></defs>
+        <path d="M200 53 L200 194"/><path d="M200 194 C200 262 88 258 88 326"/><path d="M200 194 C200 262 312 258 312 326"/><path d="M88 326 C88 396 200 372 200 431"/><path d="M312 326 C312 396 200 372 200 431"/>
+      </svg>
+      <div class="node glass" style="--x:50%;--y:12%"><span class="node__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+</span>Lead form submitted</div>
+      <div class="node glass node--hot" style="--x:50%;--y:44%"><span class="node__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="9" width="16" height="11" rx="2"/><path d="M12 9V5m0 0a2 2 0 100-4 2 2 0 000 4zM8 14v1m8-1v1"/></svg>
+</span>AI qualifies &amp; tags</div>
+      <div class="node glass" style="--x:22%;--y:74%"><span class="node__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.4 8.4 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+</span>SMS + email</div>
+      <div class="node glass" style="--x:78%;--y:74%"><span class="node__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.5 2.1L8 9.7a16 16 0 006.3 6.3l1.2-1.2a2 2 0 012.1-.5c.9.3 1.8.5 2.7.6a2 2 0 011.7 2.1z"/></svg>
+</span>Call connect</div>
+      <div class="node glass node--done" style="--x:50%;--y:98%"><span class="node__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 15l2 2 4-4"/></svg>
+</span>Appointment booked</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ CASE STUDY: PRECISION APPLIANCE REPAIR -->
+<section class="section section--line pc" id="precision-case">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-reveal>Featured case study · HighLevel</span>
+      <h2 class="h-2" data-split>Precision Appliance Repair: <span class="grad">an A2P-ready funnel,</span> an AI agent and booking automation.</h2>
+      <p class="lede" data-reveal>A complete lead-to-booking system built end to end: a compliant SMS-consent funnel, a text and voice AI named Joe, and workflows that confirm every appointment.</p>
+    </div>
+    <div class="chips pc-chips" data-stagger>
+      <span class="chip">Sample brand built for a HighLevel test assignment</span><span class="chip">A2P 10DLC</span><span class="chip">Conversation AI</span><span class="chip">Voice AI</span>
+    </div>
+
+    <div class="pc-stats pc-stats--3d" data-stagger>
+      <div class="stat glass tilt" data-tilt-max="10"><b data-count="3">3</b><span>Parts delivered</span></div>
+      <div class="stat glass tilt" data-tilt-max="10"><b data-count="6">6</b><span>A2P compliance elements</span></div>
+      <div class="stat glass tilt" data-tilt-max="10"><b data-count="8" data-suffix="s">8s</b><span>AI reply spacing</span></div>
+      <div class="stat glass tilt" data-tilt-max="10"><b data-count="1" data-suffix=" hr">1 hr</b><span>Auto-resume after human takeover</span></div>
+    </div>
+
+    <ol class="journey" id="journey" data-inview aria-label="Lead journey">
+      <li><i>1</i><b>Landing page</b><span>Services, FAQ, repair CTA</span></li>
+      <li><i>2</i><b>Calendar pop-up</b><span>Customer picks a 3-hr window</span></li>
+      <li><i>3</i><b>Consent form</b><span>Unchecked SMS opt-in</span></li>
+      <li><i>4</i><b>Webhook → CRM</b><span>Contact + opportunity + tag</span></li>
+      <li><i>5</i><b>Confirmation</b><span>Email sent, team notified</span></li>
+    </ol>
+
+    <div class="pc-tabs" role="tablist" data-reveal>
+      <button role="tab" class="is-on" data-tab="funnel" aria-selected="true" id="tab-funnel" aria-controls="panel-funnel">Part 1 · A2P Funnel</button>
+      <button role="tab" data-tab="ai" aria-selected="false" id="tab-ai" aria-controls="panel-ai">Part 2 · Joe (Text + Voice AI)</button>
+      <button role="tab" data-tab="flows" aria-selected="false" id="tab-flows" aria-controls="panel-flows">Part 3 · Workflows</button>
+    </div>
+
+    <div class="pc-panel is-on" data-panel="funnel" id="panel-funnel" role="tabpanel" aria-labelledby="tab-funnel">
+      <div class="pc-copy">
+        <h3 class="h-3">A custom-coded funnel reviewers can verify in seconds.</h3>
+        <p>Home, Privacy Policy and Terms &amp; Conditions pages, with the booking calendar embedded in the request form. Customers click Request a Repair, pick a slot, then complete their details and consent, all on one page.</p>
+        <ul class="checklist">
+          <li>Unchecked SMS consent box, voluntary and never a condition of purchase</li>
+          <li>Program details: who texts, message types, frequency, "msg &amp; data rates may apply"</li>
+          <li>STOP / HELP instructions beside the consent text</li>
+          <li>Privacy Policy and Terms linked at the point of consent and in the footer</li>
+          <li>Same business name, address, phone and email on every page</li>
+          <li>Clear service description that matches the campaign use case</li>
+        </ul>
+        <div class="pc-links">
+          <a href="https://api.prosbuddy.com/preview/pKhFWUQMlBN0ZIjw5tCa?notrack=true" target="_blank" rel="noopener" class="btn btn--primary btn--sm">View live funnel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://api.prosbuddy.com/preview/uLuYS3tn9UIHbdunthW7" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Privacy Policy</a>
+          <a href="https://api.prosbuddy.com/preview/eRNwot7zMOgmv4km9MqQ" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Terms &amp; Conditions</a>
+        </div>
+      </div>
+      <div class="pc-shots pc-shots--5" data-explode>
+        <figure class="browser tilt pc-wide" data-lb data-lb-wide="true" data-lb-tag="Case study · Funnel" data-lb-title="Home page with repair request form" data-lb-desc="Custom-coded landing page with the Request a Repair form, SMS consent checkbox with program disclosures, and links to the Privacy Policy and Terms.">
+          <div class="browser__bar"><i></i><i></i><i></i><span>Precision Appliance Repair · Home</span></div>
+          <div class="browser__body"><img src="assets/img/automation/precision/funnel-home.jpg" alt="Precision Appliance Repair home page with repair request form" loading="lazy"></div>
+        </figure>
+        <figure class="browser tilt" data-lb data-lb-wide="true" data-lb-tag="Case study · Funnel" data-lb-title="Calendar pop-up" data-lb-desc="Clicking Request a Repair opens the embedded HighLevel calendar so the customer picks a 3-hour arrival window first.">
+          <div class="browser__bar"><i></i><i></i><i></i><span>Calendar pop-up</span></div>
+          <div class="browser__body"><img src="assets/img/automation/precision/calendar-popup.jpg" alt="Appointment calendar pop-up" loading="lazy"></div>
+        </figure>
+        <figure class="browser tilt" data-lb data-lb-wide="true" data-lb-tag="Case study · Funnel" data-lb-title="Booking details form" data-lb-desc="After choosing a time the customer enters their details and confirms consent before scheduling.">
+          <div class="browser__bar"><i></i><i></i><i></i><span>Booking form</span></div>
+          <div class="browser__body"><img src="assets/img/automation/precision/booking-form.jpg" alt="Booking details form with consent checkbox" loading="lazy"></div>
+        </figure>
+        <figure class="browser tilt" data-lb data-lb-wide="true" data-lb-tag="Case study · Compliance" data-lb-title="Terms &amp; Conditions" data-lb-desc="SMS program name, message types, frequency, cost, and opt-out instructions.">
+          <div class="browser__bar"><i></i><i></i><i></i><span>Terms &amp; Conditions</span></div>
+          <div class="browser__body"><img src="assets/img/automation/precision/terms.jpg" alt="Terms and Conditions page" loading="lazy"></div>
+        </figure>
+        <figure class="browser tilt" data-lb data-lb-wide="true" data-lb-tag="Case study · Compliance" data-lb-title="Privacy Policy" data-lb-desc="What is collected, how it is used, and how messaging data is handled.">
+          <div class="browser__bar"><i></i><i></i><i></i><span>Privacy Policy</span></div>
+          <div class="browser__body"><img src="assets/img/automation/precision/privacy.jpg" alt="Privacy Policy page" loading="lazy"></div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="pc-panel" data-panel="ai" id="panel-ai" role="tabpanel" aria-labelledby="tab-ai" hidden>
+      <div class="pc-copy">
+        <h3 class="h-3">Meet Joe: one assistant for chat and phone.</h3>
+        <p>Joe greets the customer, asks the appliance and brand, states the $70 service call fee, collects the address and phone, then offers the single nearest 3-hour window from the live calendar.</p>
+        <ul class="checklist">
+          <li>One question at a time, never asks for info already given</li>
+          <li>Writes appliance, brand, address, ZIP and phone to custom fields</li>
+          <li>Books only with complete details and real availability</li>
+          <li>Auto-pilot with 8-second reply spacing so it feels natural</li>
+          <li>Pauses when a team member steps in, resumes after 1 hour</li>
+          <li>Matching Voice AI agent with a natural, filler-word voice</li>
+        </ul>
+      </div>
+      <div class="pc-shots pc-shots--2" data-explode>
+        <figure class="browser tilt" data-lb data-lb-tag="Case study · Conversation AI" data-lb-title="Joe in the website chat widget" data-lb-desc="Joe answers on the funnel, qualifies the repair and moves the customer toward a booking.">
+          <div class="browser__bar"><i></i><i></i><i></i><span>Conversation AI</span></div>
+          <div class="browser__body"><img src="assets/img/automation/precision/conversation-ai.jpg" alt="Joe chat conversation asking appliance brand and problem" loading="lazy"></div>
+        </figure>
+        <figure class="browser tilt" data-lb data-lb-tag="Case study · Voice AI" data-lb-title="Joe, voice agent" data-lb-desc="The same assistant takes calls from the chat widget with a Call us here button.">
+          <div class="browser__bar"><i></i><i></i><i></i><span>Voice AI</span></div>
+          <div class="browser__body"><img src="assets/img/automation/precision/voice-ai.jpg" alt="Joe AI support agent with Call us here button" loading="lazy"></div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="pc-panel" data-panel="flows" id="panel-flows" role="tabpanel" aria-labelledby="tab-flows" hidden>
+      <div class="pc-copy">
+        <h3 class="h-3">From form submit to confirmed booking, automatically.</h3>
+        <p>An inbound webhook from the funnel creates the contact, opens an opportunity, tags it and alerts the team. When the appointment is booked, a second workflow updates the opportunity and emails the customer.</p>
+        <div class="chain"><span>Form submitted</span><span>Contact + opportunity</span><span>Internal alert + tag</span><span>Appointment booked</span><span>Confirmation email</span></div>
+        <p class="pc-tested"><span class="dot"></span>Tested end to end: webhook in, contact created, appointment booked, confirmation delivered.</p>
+      </div>
+      <div class="pc-shots pc-shots--2" data-explode>
+        <figure class="browser tilt" data-lb data-lb-tag="Case study · GoHighLevel" data-lb-title="Form Submission workflow" data-lb-desc="Inbound webhook → create contact → create or update opportunity → internal notification → tag.">
+          <div class="browser__bar"><i></i><i></i><i></i><span>Form Submission</span></div>
+          <div class="browser__body"><img src="assets/img/automation/precision/workflow-form-submission.jpg" alt="GoHighLevel form submission workflow" loading="lazy"></div>
+        </figure>
+        <figure class="browser tilt" data-lb data-lb-tag="Case study · GoHighLevel" data-lb-title="Appointment Booking Confirmation workflow" data-lb-desc="Appointment status trigger → create or update opportunity → 3-minute wait → confirmation email.">
+          <div class="browser__bar"><i></i><i></i><i></i><span>Booking Confirmation</span></div>
+          <div class="browser__body"><img src="assets/img/automation/precision/workflow-booking-confirmation.jpg" alt="GoHighLevel appointment booking confirmation workflow" loading="lazy"></div>
+        </figure>
+      </div>
+    </div>
+    <p class="pc-pdf" data-reveal><a class="link-arrow" href="assets/docs/precision-appliance-repair-case-study.pdf" target="_blank" rel="noopener">Download the full case study (PDF) <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg></a></p>
+  </div>
+</section>
+
+<!-- ============================================================ GHL WORKFLOWS -->
+<section class="section section--line" id="ghl-workflows">
+  <div class="wrap">
+    <div class="sec-head sec-head--row">
+      <div>
+        <span class="eyebrow" data-reveal>GoHighLevel workflows</span>
+        <h2 class="h-2" data-split>From first click to <span class="grad">booked appointment.</span></h2>
+        <p class="lede" data-reveal>Workflows that catch a lead the moment it lands, follow up until it books, and keep the pipeline honest along the way.</p>
+      </div>
+      <span class="chip" data-reveal><span class="dot"></span>3 live workflows</span>
+    </div>
+
+    <article class="flow-card">
+      <figure class="browser" data-reveal="tilt" data-lb data-lb-wide="true" data-lb-tag="Automation · GoHighLevel" data-lb-title="New Lead Nurture (Fast 5) — Claim Offer" data-lb-desc="Facebook lead form → opportunity + nurture → instant email and SMS → waits for a reply, then branches: replies go to Hot Lead and get a booking or survey link; no reply triggers a call and a next-day SMS.">
+        <div class="browser__bar"><i></i><i></i><i></i><span>GoHighLevel · New Lead Nurture (Fast 5) — Claim Offer</span></div>
+        <div class="browser__body"><img src="assets/img/automation/ghl-lead-nurture.jpg" alt="GoHighLevel New Lead Nurture workflow with reply branching" loading="lazy"><span class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</span></div>
+      </figure>
+      <div class="flow-card__body" data-reveal="right">
+        <span class="flow-num mono">Workflow 01 · Lead nurture</span>
+        <h3 class="h-3">New Lead Nurture — Claim Offer</h3>
+        <p>Built for speed-to-lead. The moment someone submits a Facebook lead form, they're in the pipeline and hearing from the business — and the workflow decides what happens next based on whether, and how, they reply.</p>
+        <ol class="steps">
+          <li><b>Trigger:</b> Facebook lead form submitted</li>
+          <li>Opportunity created in <b>New Lead</b>; contact added to long-term nurture</li>
+          <li>Conversational <b>email + SMS</b> go out instantly</li>
+          <li>Waits for a reply (moves on after 2 minutes)</li>
+          <li class="is-branch"><b>Replied:</b> moved to Hot Lead — positive replies get a booking link, negative ones a survey link</li>
+          <li class="is-branch"><b>No reply:</b> Call Connect rings the lead, then an "any questions?" SMS the next day</li>
+        </ol>
+        <div class="chips"><span class="chip">Facebook Lead Ads</span><span class="chip">SMS</span><span class="chip">Email</span><span class="chip">Call Connect</span><span class="chip">Reply branching</span></div>
+      </div>
+    </article>
+
+    <div class="handoff" data-reveal><span class="handoff__line"></span><span class="handoff__pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+<span><b>Handoff:</b> when a nurtured lead books, Workflow 02 takes over and removes them from the nurture sequence.</span></span></div>
+
+    <article class="flow-card flow-card--rev">
+      <figure class="browser" data-reveal="tilt" data-lb data-lb-wide="true" data-lb-tag="Automation · GoHighLevel" data-lb-title="Appointment Confirmation + Reminders" data-lb-desc="Appointment confirmed → removed from the new-lead workflow → opportunity moved to Booking → confirmation email → 24-hour reminder email → 1-hour reminder email and SMS.">
+        <div class="browser__bar"><i></i><i></i><i></i><span>GoHighLevel · Appointment Confirmation + Reminders</span></div>
+        <div class="browser__body"><img src="assets/img/automation/ghl-appointment-reminders.jpg" alt="GoHighLevel appointment confirmation and reminders workflow" loading="lazy"><span class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</span></div>
+      </figure>
+      <div class="flow-card__body" data-reveal="left">
+        <span class="flow-num mono">Workflow 02 · Bookings</span>
+        <h3 class="h-3">Appointment Confirmation + Reminders</h3>
+        <p>Once a lead books, sales follow-ups stop and the reminders start. The deal moves to Booking automatically, and the customer hears from the business at exactly the right moments before they show up.</p>
+        <div class="chain" data-stagger="fade"><span>Appointment confirmed</span><span>Removed from nurture</span><span>Opportunity → Booking</span><span>Confirmation email</span><span>24 hr reminder email</span><span>1 hr email + SMS</span></div>
+        <div class="chips"><span class="chip">Calendar trigger</span><span class="chip">Pipeline stages</span><span class="chip">Email</span><span class="chip">SMS</span></div>
+      </div>
+    </article>
+
+    <article class="flow-card">
+      <figure class="browser" data-reveal="tilt" data-lb data-lb-wide="true" data-lb-tag="Automation · GoHighLevel" data-lb-title="Buyer / Seller Automation — Real Estate" data-lb-desc="One intake form that routes real estate leads into buyer, seller or needs-review paths — tagging, emailing, texting and alerting the agent, with budget and urgency conditions that flag the hottest leads.">
+        <div class="browser__bar"><i></i><i></i><i></i><span>GoHighLevel · Buyer – Seller Automation Real Estate</span></div>
+        <div class="browser__body"><img src="assets/img/automation/ghl-buyer-seller.jpg" alt="GoHighLevel buyer and seller real estate lead routing workflow" loading="lazy"><span class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</span></div>
+      </figure>
+      <div class="flow-card__body" data-reveal="right">
+        <span class="flow-num mono">Workflow 03 · Lead routing</span>
+        <h3 class="h-3">Buyer / Seller Automation — Real Estate</h3>
+        <p>One intake form that sorts real estate leads into buyers and sellers, tags and follows up with each, and alerts the agent the moment a lead is worth dropping everything for.</p>
+        <ol class="steps">
+          <li><b>Trigger:</b> form submitted → contact and opportunity created</li>
+          <li class="is-branch"><b>Buyers:</b> tagged, emailed and texted; a $250K–$500K budget flags a high-budget lead, alerts the agent and hands off to Conversation AI</li>
+          <li class="is-branch"><b>Sellers:</b> tagged, emailed and texted; "as soon as possible" sellers are flagged urgent with email + SMS alerts to the team</li>
+          <li class="is-branch"><b>Neither:</b> tagged Needs Review with an internal alert</li>
+        </ol>
+        <div class="chips"><span class="chip">Lead routing</span><span class="chip">Tagging</span><span class="chip">Internal alerts</span><span class="chip">Conversation AI</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================ VOICE AI -->
+<section class="section section--tight" id="voice-ai">
+  <div class="wrap">
+    <div class="voice glass" data-reveal="scale">
+      <div class="voice__orb" aria-hidden="true"><span></span><span></span><span></span><i class="voice__wave"><b></b><b></b><b></b><b></b><b></b><b></b><b></b></i></div>
+      <div class="voice__copy">
+        <span class="eyebrow">Voice AI &amp; chatbots</span>
+        <h2 class="h-2">An assistant that <span class="grad">never misses a call.</span></h2>
+        <p class="lede">Conversational AI inside GoHighLevel that answers calls, qualifies leads and books appointments — trained on the client's own offers and objections.</p>
+        <ul class="checklist">
+          <li>Inbound &amp; outbound voice agents</li>
+          <li>Website &amp; SMS chatbots</li>
+          <li>Trained on real FAQs &amp; pricing</li>
+        </ul>
+        <div class="voice__cta"><a href="contact.html" class="btn btn--primary">See a demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg></a><a href="#precision-case" class="link-arrow">Meet "Joe" in the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ ZAPS -->
+<section class="section section--line" id="zaps">
+  <div class="wrap">
+    <div class="sec-head sec-head--row">
+      <div>
+        <span class="eyebrow" data-reveal>Zapier zaps</span>
+        <h2 class="h-2" data-split>Lightweight zaps that keep <span class="grad">small teams in sync.</span></h2>
+        <p class="lede" data-reveal>Quick, reliable connections between the tools a team already uses — no new software to learn.</p>
+      </div>
+      <span class="chip" data-reveal style="--c:#FF4A00"><span class="dot" style="background:#FF4A00;box-shadow:0 0 10px #FF4A00"></span>1 live zap</span>
+    </div>
+    <div class="zap-grid">
+      <figure class="browser zap-tall" data-reveal="left" data-lb data-lb-wide="true" data-lb-tag="Automation · Zapier" data-lb-title="Daily Reminder Zap — live in Zapier" data-lb-desc="Schedule by Zapier (every day) → Zapier Tables: find records → SMS by Zapier: send SMS → Slack: send direct message.">
+        <div class="browser__bar"><i></i><i></i><i></i><span>Zapier · Editor</span></div>
+        <div class="browser__body"><img src="assets/img/automation/zap-daily-reminder.jpg" alt="Zapier zap: Schedule, Zapier Tables, SMS by Zapier, Slack" loading="lazy"><span class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</span></div>
+      </figure>
+      <div class="zap-main">
+        <figure class="browser" data-reveal="right" data-lb data-lb-wide="true" data-lb-tag="Automation · Zapier" data-lb-title="How zaps connect a stack" data-lb-desc="Overview of how Zapier sits in the middle of a business's tools — emails, forms, calendars, spreadsheets and files come in, and tasks, stored files and notifications go out.">
+          <div class="browser__bar"><i></i><i></i><i></i><span>Zapier · How it connects</span></div>
+          <div class="browser__body"><img src="assets/img/automation/zapier-hub.jpg" alt="Diagram of Zapier connecting email, forms, calendar and spreadsheets to tasks, files and notifications" loading="lazy"><span class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</span></div>
+        </figure>
+        <div class="zap-main__body" data-reveal>
+          <span class="flow-num mono">Zap 01 · Scheduled</span>
+          <h3 class="h-3">Daily Reminder Zap</h3>
+          <p>Runs on its own every day: it pulls the matching records from a Zapier Table, sends the SMS, and messages the team on Slack so everyone knows what went out — no one has to remember to do it.</p>
+          <div class="chain" data-stagger="fade"><span>Schedule · every day</span><span>Zapier Tables · find records</span><span>SMS by Zapier</span><span>Slack DM</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ MAKE SCENARIO -->
+<section class="section section--line" id="scenarios">
+  <div class="wrap">
+    <div class="sec-head sec-head--row">
+      <div>
+        <span class="eyebrow" data-reveal>Make scenarios</span>
+        <h2 class="h-2" data-split>Multi-step scenarios for <span class="grad">branching logic.</span></h2>
+        <p class="lede" data-reveal>When a process needs filters, routers and loops, Make handles it visually — one trigger, several outcomes.</p>
+      </div>
+      <span class="chip" data-reveal><span class="dot" style="background:#8b2cf5;box-shadow:0 0 10px #8b2cf5"></span>1 live scenario</span>
+    </div>
+    <figure class="browser scenario-shot" data-reveal="tilt" data-lb data-lb-wide="true" data-lb-tag="Automation · Make" data-lb-title="Content Calendar → Social Publishing" data-lb-desc="Airtable (watch records) → filter: link post exists → Buffer (create status update) → Router. Route 1: Iterator → Text aggregator → Airtable (update record). Route 2: Slack (create message).">
+      <div class="browser__bar"><i></i><i></i><i></i><span>Make · Content Calendar → Social Publishing</span></div>
+      <div class="browser__body"><img src="assets/img/automation/make.png" alt="Make scenario: Airtable, Buffer, Router, Iterator, Text aggregator, Airtable update, Slack" loading="lazy"><span class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</span></div>
+    </figure>
+    <div class="scenario" data-stagger>
+      <div class="glass scenario__col">
+        <span class="flow-num mono">Scenario 01 · Content ops</span>
+        <h3 class="h-3">Content Calendar → Social Publishing</h3>
+        <p>Turns an Airtable content calendar into scheduled posts. When a record is ready, Make queues it in Buffer, then splits into two routes: one writes the result back to Airtable, the other tells the team on Slack.</p>
+      </div>
+      <div class="glass scenario__col">
+        <span class="flow-label">Main path</span>
+        <ol class="steps">
+          <li><b>Airtable</b> watches the content calendar on a schedule</li>
+          <li><b>Filter:</b> only records with a link post continue</li>
+          <li><b>Buffer</b> creates the status update</li>
+          <li><b>Router</b> splits into two routes</li>
+        </ol>
+      </div>
+      <div class="glass scenario__col">
+        <span class="flow-label">Routes</span>
+        <ol class="steps">
+          <li class="is-branch"><b>Route 1:</b> Iterator + text aggregator compile the post details, then Airtable updates the record</li>
+          <li class="is-branch"><b>Route 2:</b> Slack posts a message so the team knows it's queued</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ CTA PORTAL -->
+<section class="cta-portal section--line">
+  <div class="cta-portal__ring" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow" data-reveal>Wire it up</span>
+    <h2 class="h-1" data-split>Let's connect <span class="grad">your stack.</span></h2>
+    <p class="lede" data-reveal>Tell me which tools you use and where leads are slipping through — I'll map the automation and build it.</p>
+    <div class="cta-portal__actions" data-reveal>
+      <a href="contact.html" class="btn btn--primary btn--lg">Let's Connect <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      <a href="https://wa.me/639569784942" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================ FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/brand/logo-nobg.png" alt="JMX — Build What's Next" width="1836" height="827" loading="lazy">
+        <p>GoHighLevel systems, AI automation, creative ads and Amazon growth — designed, built and run by Jonathan Mendoza.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <nav class="footer__links" aria-label="Footer">
+          <a href="index.html" data-page="index">Home</a>
+          <a href="work.html" data-page="work">Work</a>
+          <a href="automation.html" data-page="automation">Automation</a>
+          <a href="amazon.html" data-page="amazon">Amazon</a>
+          <a href="creative.html" data-page="creative">Creative</a>
+          <a href="about.html" data-page="about">About</a>
+          <a href="contact.html" data-page="contact">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <div class="footer__links">
+          <a href="mailto:jnthnmendoza09@gmail.com">jnthnmendoza09@gmail.com</a>
+          <a href="tel:+639569784942">+63 956 978 4942</a>
+          <a href="https://wa.me/639569784942" target="_blank" rel="noopener">WhatsApp · +63 956 978 4942</a>
+          <a href="https://www.linkedin.com/in/jonathan-mendoza-c/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.facebook.com/jonathan.mendoza.7839" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/mndz.jnthn/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__big" aria-hidden="true" data-speed="-0.06">Build what's next</div>
+    <div class="footer__bottom">
+      <span>&copy; <span data-year>2026</span> Jonathan Mendoza — JMX. All rights reserved.</span>
+      <span>Antipolo City, Philippines · Working worldwide</span>
+    </div>
+  </div>
+</footer>
+
+<script defer src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script defer src="js/global.js"></script>
+<script defer src="js/automation.js"></script>
+</body>
+</html>
