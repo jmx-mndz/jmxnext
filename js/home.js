@@ -553,6 +553,8 @@
 
   /* ============================================================ init */
   hero3D();
+  /* hero stat cards rise into place in 3D once the loader clears */
+  J.onReady(() => { const h = $('#hstats'); if (h) setTimeout(() => h.classList.add('is-on'), 300); });
   ring3d();
   depthParallax($('#hero'), $$('.hero__aside [data-depth]'), 1);
   depthParallax($('#services'), $$('#space [data-depth]'), 0.6);
