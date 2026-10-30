@@ -1,0 +1,81 @@
+/* ==========================================================================
+   JMX — about.css  (about.html only)
+   3D portrait hero · story + facts · scroll-drawn timeline · client
+   feedback · tools marquee
+   ========================================================================== */
+
+/* ------------------------------------------------ hero portrait */
+.about-hero__grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr);gap:clamp(40px,6vw,96px);align-items:center}
+.about-hero .h-1{max-width:13ch}
+.about-hero__chips{margin-top:34px}
+.portrait{position:relative;width:100%;max-width:420px;justify-self:end;perspective:1200px}
+.portrait__frame{position:relative;aspect-ratio:3/4;border-radius:28px;overflow:hidden;border:1px solid var(--line-3);
+  box-shadow:0 60px 120px -40px rgba(0,0,0,.95),0 0 80px -20px rgba(122,72,254,.55);
+  transform:rotateY(var(--ry,-8deg)) rotateX(var(--rx,4deg));transition:transform .8s var(--ease);transform-style:preserve-3d}
+.portrait__frame img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;scale:1.08}
+.portrait__shine{position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.18) 48%,transparent 60%);background-size:250% 100%;background-position:var(--sx,100%) 0;mix-blend-mode:overlay}
+.portrait__tag{position:absolute;left:-14%;bottom:9%;z-index:2;display:grid;gap:2px;padding:14px 18px;border-radius:16px;transform:translateZ(60px)}
+.portrait__tag b{font-family:var(--f-display);font-size:1rem}
+.portrait__tag span{font-size:.82rem;color:var(--muted)}
+.portrait__ring{position:absolute;inset:-8%;z-index:-1;border-radius:50%;border:1px dashed rgba(180,77,253,.35);animation:spin 40s linear infinite}
+
+/* ------------------------------------------------ story */
+.story{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(40px,6vw,90px);align-items:start}
+.story__copy{display:grid;gap:22px}
+.story__copy p{color:var(--muted);font-size:1.04rem;line-height:1.8}
+.story__copy .story__lead{font-family:var(--f-display);font-size:clamp(1.35rem,2.2vw,1.85rem);line-height:1.4;letter-spacing:-.02em;color:var(--ink)}
+.facts{display:grid;gap:14px}
+.fact{display:flex;gap:18px;align-items:flex-start;padding:22px;border-radius:var(--radius)}
+.fact__n{flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:12px;font-size:.78rem;background:var(--grad);color:#fff}
+.fact b{display:block;font-family:var(--f-display);font-size:1.02rem;margin-bottom:4px}
+.fact p{font-size:.9rem;color:var(--muted);line-height:1.6}
+
+/* ------------------------------------------------ timeline */
+.tl{position:relative;display:grid;gap:clamp(22px,3vw,34px);max-width:1080px;margin:0 auto}
+.tl__line{position:absolute;left:50%;top:0;bottom:0;width:2px;translate:-50% 0;background:var(--line)}
+.tl__line i{display:block;width:100%;height:100%;background:linear-gradient(var(--blue),var(--violet));transform-origin:50% 0;transform:scaleY(var(--p,0));box-shadow:0 0 14px rgba(180,77,253,.7)}
+.tl__item{position:relative;width:50%;padding-right:clamp(30px,4vw,56px)}
+.tl__item--r{margin-left:50%;padding-right:0;padding-left:clamp(30px,4vw,56px)}
+.tl__dot{position:absolute;top:30px;right:-8px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid var(--line-3);z-index:1;transition:background .5s,border-color .5s,box-shadow .5s}
+.tl__item--r .tl__dot{right:auto;left:-8px}
+.tl__item.is-lit .tl__dot{background:var(--violet);border-color:#fff;box-shadow:0 0 0 6px rgba(180,77,253,.2),0 0 20px rgba(180,77,253,.9)}
+.tl__card{padding:26px 28px;border-radius:var(--radius)}
+.tl__card--now .tl__date{color:#8ff0bf}
+.tl__card--now .tl__date::before{content:"";display:inline-block;width:6px;height:6px;margin-right:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);vertical-align:middle;translate:0 -1px}
+.tl__group{position:relative;z-index:1;display:flex;justify-content:center;margin:clamp(6px,1vw,14px) 0}
+.tl__group span{padding:8px 16px;border-radius:999px;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#d9ccff;background:var(--bg-3);border:1px solid rgba(180,77,253,.4);box-shadow:0 0 30px -8px rgba(138,72,254,.7)}
+.tl__card:hover{border-color:rgba(180,77,253,.4)}
+.tl__date{display:inline-block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#c9b8ff;margin-bottom:10px}
+.tl__card .h-3{margin-bottom:6px}
+.tl__org{display:block;font-size:.88rem;color:var(--muted);margin-bottom:16px}
+.tl__card ul{display:grid;gap:8px}
+.tl__card ul li{position:relative;padding-left:18px;font-size:.92rem;color:var(--ink-2);line-height:1.6}
+.tl__card ul li::before{content:"";position:absolute;left:0;top:.65em;width:6px;height:6px;border-radius:50%;background:var(--grad)}
+
+/* ------------------------------------------------ feedback */
+.feedback{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.fb{display:flex;flex-direction:column;gap:28px;padding:clamp(24px,3vw,36px);border-radius:var(--radius-lg)}
+.fb__quote img{width:100%;max-height:220px;object-fit:cover;border-radius:14px;border:1px solid var(--line-2);margin-bottom:22px}
+.fb blockquote{margin:0 0 14px;font-family:var(--f-display);font-size:clamp(1.15rem,1.7vw,1.4rem);line-height:1.4;letter-spacing:-.015em}
+.fb blockquote span{display:block;margin-top:8px;color:#c9b8ff}
+.fb cite{font-style:normal;font-size:.86rem;color:var(--muted)}
+.fb cite b{color:#fff}
+.fb__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:auto;padding-top:24px;border-top:1px solid var(--line)}
+.fb__stats .stat b{font-size:clamp(1.25rem,2vw,1.6rem)}
+.fb__stats .stat span{font-size:.8rem}
+
+/* ------------------------------------------------ responsive */
+@media (max-width:980px){
+  .about-hero__grid,.story{grid-template-columns:1fr}
+  .portrait{justify-self:center;max-width:340px;margin-top:20px}
+  .portrait__tag{left:-6%}
+  .feedback{grid-template-columns:1fr}
+  .tl__line{left:8px;translate:0 0}
+  .tl__item,.tl__item--r{width:100%;margin-left:0;padding:0 0 0 40px}
+  .tl__dot,.tl__item--r .tl__dot{left:1px;right:auto}
+  .tl__group{justify-content:flex-start;padding-left:0}
+}
+@media (max-width:560px){
+  .fb__stats{grid-template-columns:1fr}
+  .tl__card{padding:22px 20px}
+}

@@ -1,0 +1,93 @@
+/* ==========================================================================
+   JMX — amazon.css  (amazon.html only)
+   Depth-stacked product hero · capability cards · sticky stacking case
+   cards · results band · A+ module wall
+   ========================================================================== */
+
+/* ------------------------------------------------ hero · depth layers */
+.amz-hero__grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(40px,6vw,90px);align-items:center}
+.amz-hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.layers{position:relative;aspect-ratio:1/0.92;perspective:1400px;transform-style:preserve-3d}
+.layers__inner{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .9s var(--ease)}
+.layer{position:absolute;width:76%;border-radius:18px;overflow:hidden;border:1px solid var(--line-2);background:#0c0b1d;
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.95),0 0 0 1px rgba(255,255,255,.03)}
+.layer img{width:100%;aspect-ratio:900/559;object-fit:cover}
+.layer:nth-child(1){left:0;top:0;opacity:.7}
+.layer:nth-child(2){left:12%;top:20%;opacity:.85}
+.layer:nth-child(3){left:24%;top:40%}
+.layer-badge{position:absolute;display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:14px;font-size:.88rem;color:var(--ink-2);white-space:nowrap}
+.layer-badge b{font-family:var(--f-display);font-size:1.05rem;color:#fff}
+.layer-badge{right:-2%;top:16%}
+.layer-badge--2{left:-4%;right:auto;top:auto;bottom:6%}
+
+/* ------------------------------------------------ capabilities */
+.caps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cap{display:flex;flex-direction:column;padding:28px 26px;border-radius:var(--radius-lg)}
+.cap:hover{border-color:rgba(180,77,253,.45);box-shadow:var(--glow)}
+.cap__icon{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--grad-soft);border:1px solid rgba(180,77,253,.3);color:#d4c6ff;margin-bottom:28px}
+.cap__icon svg{width:22px;height:22px}
+.cap__big{font-family:var(--f-display);font-size:clamp(1.8rem,2.6vw,2.3rem);font-weight:600;letter-spacing:-.03em;line-height:1;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cap h3{font-size:1.06rem;margin:14px 0 8px}
+.cap p{font-size:.9rem;color:var(--muted);line-height:1.65}
+
+/* ------------------------------------------------ sticky stacking deck */
+.deck{display:grid;gap:clamp(24px,4vw,44px);padding-bottom:20px}
+.deck__card{
+  position:sticky;top:calc(var(--nav-h) + 24px + var(--k) * 22px);
+  display:grid;grid-template-columns:1.25fr 1fr;align-items:stretch;
+  border-radius:var(--radius-lg);overflow:hidden;
+  background:linear-gradient(160deg,#17143c,#0a0919 70%);border:1px solid var(--line-2);
+  box-shadow:0 -20px 60px -20px rgba(0,0,0,.8);transform-origin:50% 0;will-change:transform;
+  height:clamp(440px,68vh,600px);
+}
+.deck__media{position:relative;overflow:hidden;background:#fff;height:100%}
+.deck__media img{width:100%;height:100%;object-fit:cover;object-position:50% 0;transition:transform 1.2s var(--ease)}
+.deck__media:hover img{transform:scale(1.04)}
+.deck__body{display:flex;flex-direction:column;gap:14px;padding:clamp(26px,3.6vw,48px)}
+.deck__num{font-size:.74rem;letter-spacing:.14em;color:var(--dim)}
+.deck__body .h-3{font-size:clamp(1.6rem,2.6vw,2.3rem);letter-spacing:-.03em}
+.deck__sub{color:#c9b8ff;font-size:.98rem;margin-top:-6px}
+.deck__body .checklist{margin:8px 0}
+.deck__stat{margin-top:auto;padding-top:20px;border-top:1px solid var(--line)}
+.deck__stat b{display:block;font-family:var(--f-display);font-size:1.6rem;font-weight:600;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
+.deck__stat span{font-size:.88rem;color:var(--muted)}
+
+/* ------------------------------------------------ results */
+.results{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(30px,5vw,64px);align-items:center;padding:clamp(28px,4.5vw,56px);border-radius:var(--radius-lg);
+  background:radial-gradient(100% 140% at 100% 0%,rgba(180,77,253,.2),transparent 55%),linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015))}
+.results__quote{display:flex;gap:22px;align-items:flex-start}
+.results__quote img{width:92px;height:92px;flex:none;border-radius:16px;object-fit:cover;border:1px solid var(--line-2)}
+.results__quote p{font-family:var(--f-display);font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.35;letter-spacing:-.02em;margin-bottom:14px}
+.results__quote span{font-size:.88rem;color:var(--muted)}
+.results__quote span b{color:#fff}
+.results__stats{display:grid;gap:22px}
+.results__stats .stat{padding-left:20px;border-left:2px solid rgba(180,77,253,.5)}
+
+/* ------------------------------------------------ A+ modules wall */
+.mods{columns:3;column-gap:18px}
+.mod{position:relative;break-inside:avoid;margin-bottom:18px;border-radius:var(--radius);overflow:hidden;background:#fff;border:1px solid var(--line-2)}
+.mod img{width:100%;transition:transform 1s var(--ease)}
+.mod:hover img{transform:scale(1.04)}
+.mod figcaption{position:absolute;inset:auto 0 0;padding:40px 18px 16px;display:grid;gap:2px;font-family:var(--f-display);font-weight:600;font-size:1rem;color:#fff;
+  background:linear-gradient(transparent,rgba(5,5,13,.92));opacity:0;transform:translateY(10px);transition:.45s var(--ease)}
+.mod figcaption small{font-family:var(--f-body);font-weight:400;font-size:.8rem;color:var(--muted)}
+.mod:hover figcaption,.mod:focus-visible figcaption{opacity:1;transform:none}
+.mod__badge{position:absolute;left:12px;top:12px;z-index:2;display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;font-size:.74rem;font-weight:600;color:#fff;background:rgba(10,8,30,.82);border:1px solid var(--line-2);backdrop-filter:blur(8px)}
+.mod__badge .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+
+/* ------------------------------------------------ responsive */
+@media (max-width:1100px){.caps{grid-template-columns:repeat(2,1fr)}.mods{columns:2}}
+@media (max-width:900px){
+  .amz-hero__grid{grid-template-columns:1fr}
+  .layers{max-width:520px;width:100%;justify-self:center;margin-top:20px}
+  .deck__card{grid-template-columns:1fr;position:relative;top:auto;height:auto}
+  .deck__media{aspect-ratio:4/3;height:auto}
+  .results{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .caps{grid-template-columns:1fr}
+  .mods{columns:1}
+  .mod figcaption{opacity:1;transform:none}
+  .results__quote{flex-direction:column}
+  .layer-badge{font-size:.78rem;padding:9px 12px}
+}

@@ -1,0 +1,98 @@
+/* ==========================================================================
+   JMX — contact.css  (contact.html only)
+   Interactive glass cube hero · contact cards · inquiry form · next steps
+   ========================================================================== */
+
+/* ------------------------------------------------ hero + glass cube */
+.contact-hero__grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(40px,6vw,90px);align-items:center}
+.contact-hero .h-1{max-width:13ch}
+.contact-hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.cube-stage{--s:clamp(200px,20vw,270px);position:relative;display:grid;place-items:center;gap:clamp(70px,8vw,100px);padding:60px 0 20px;perspective:1200px;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.cube-stage::before{content:"";position:absolute;left:50%;top:46%;width:calc(var(--s) * 1.9);aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(122,72,254,.35),transparent 65%);filter:blur(20px);z-index:-1}
+.cube{position:relative;width:var(--s);height:var(--s);transform-style:preserve-3d;will-change:transform}
+.cube__face{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;text-align:center;
+  border-radius:22px;color:var(--ink);
+  background:linear-gradient(150deg,rgba(78,64,190,.92),rgba(24,18,66,.94) 55%,rgba(120,52,180,.9));
+  border:1px solid rgba(200,180,255,.38);
+  box-shadow:inset 0 0 40px rgba(122,72,254,.35),inset 0 1px 0 rgba(255,255,255,.3),0 0 30px -6px rgba(138,72,254,.5);
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:background .4s,border-color .4s;
+}
+button.cube__face:hover{background:linear-gradient(150deg,rgba(104,86,240,.96),rgba(40,28,100,.96) 55%,rgba(160,70,230,.94));border-color:#fff}
+.cube__face--f{transform:translateZ(calc(var(--s) / 2))}
+.cube__face--b{transform:rotateY(180deg) translateZ(calc(var(--s) / 2))}
+.cube__face--r{transform:rotateY(90deg) translateZ(calc(var(--s) / 2))}
+.cube__face--l{transform:rotateY(-90deg) translateZ(calc(var(--s) / 2))}
+.cube__face--t{transform:rotateX(90deg) translateZ(calc(var(--s) / 2))}
+.cube__face--d{transform:rotateX(-90deg) translateZ(calc(var(--s) / 2))}
+.cube__face--t img{width:60%}
+.cube__i{display:grid;place-items:center;width:54px;height:54px;border-radius:16px;background:var(--grad);box-shadow:0 10px 24px -8px rgba(122,72,254,.9)}
+.cube__i svg{width:24px;height:24px}
+.cube__face b{font-family:var(--f-display);font-size:1.2rem;letter-spacing:-.02em}
+.cube__face small{font-size:.8rem;color:var(--ink-2)}
+.cube-hint{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);text-align:center}
+
+/* ------------------------------------------------ contact cards */
+.contact-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.1fr);gap:clamp(36px,5vw,72px);align-items:start}
+.contact-side .lede{margin:0 0 30px}
+.contact-side .h-2{margin-bottom:16px}
+.ccards{display:grid;gap:12px}
+.ccard{display:flex;align-items:center;gap:16px;padding:16px 18px;border-radius:var(--radius)}
+a.ccard:hover{border-color:rgba(180,77,253,.5);box-shadow:var(--glow)}
+.ccard__i{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--grad-soft);border:1px solid rgba(180,77,253,.3);color:#d4c6ff}
+.ccard__i svg{width:20px;height:20px}
+.ccard__i--wa{background:rgba(37,211,102,.14);border-color:rgba(37,211,102,.4);color:#4ade80}
+.ccard__i--ig{background:linear-gradient(135deg,rgba(254,218,117,.16),rgba(214,41,118,.18),rgba(79,91,213,.18));border-color:rgba(214,41,118,.4);color:#ff8fc4}
+.ccard b{display:block;font-family:var(--f-display);font-size:1rem;font-weight:600;word-break:break-word;line-height:1.35}
+.ccard small{font-size:.84rem;color:var(--muted)}
+.ccard__go{margin-left:auto;display:grid;place-items:center;width:36px;height:36px;flex:none;border-radius:50%;border:1px solid var(--line-2);transition:.4s var(--ease)}
+.ccard__go svg{width:14px;height:14px}
+a.ccard:hover .ccard__go{background:var(--grad);border-color:transparent;transform:rotate(45deg)}
+
+/* ------------------------------------------------ form */
+.inquiry{display:grid;gap:20px;padding:clamp(24px,3.4vw,40px);border-radius:var(--radius-lg)}
+.inquiry__head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.inquiry__head b{font-family:var(--f-display);font-size:1.3rem}
+.inquiry__head span{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.field{display:grid;gap:8px;margin:0;padding:0;border:0;min-width:0}
+.field > span,.field legend{font-size:.84rem;font-weight:500;color:var(--ink-2);padding:0;margin-bottom:8px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field input,.field textarea{
+  width:100%;padding:14px 16px;border-radius:12px;font:inherit;font-size:.98rem;color:var(--ink);
+  background:rgba(5,5,13,.55);border:1px solid var(--line-2);transition:border-color .3s,box-shadow .3s,background .3s;resize:vertical;
+}
+.field input::placeholder,.field textarea::placeholder{color:var(--dim)}
+.field input:focus,.field textarea:focus{outline:none;border-color:rgba(180,77,253,.7);box-shadow:0 0 0 4px rgba(138,72,254,.18);background:rgba(10,8,30,.8)}
+.field input.is-bad,.field textarea.is-bad{border-color:#ff6b8a}
+.pick{display:flex;flex-wrap:wrap;gap:8px}
+.pick label{position:relative;cursor:pointer}
+.pick input{position:absolute;opacity:0;pointer-events:none}
+.pick span{display:inline-flex;padding:10px 16px;border-radius:999px;font-size:.88rem;color:var(--ink-2);border:1px solid var(--line-2);background:rgba(255,255,255,.03);transition:.3s var(--ease)}
+.pick label:hover span{border-color:var(--line-3)}
+.pick input:checked + span{color:#fff;background:var(--grad);border-color:transparent;box-shadow:0 8px 20px -8px rgba(122,72,254,.8)}
+.pick input:focus-visible + span{outline:2px solid var(--violet);outline-offset:2px}
+.pick label.is-flash span{animation:flash .9s var(--ease)}
+@keyframes flash{30%{transform:scale(1.12)}}
+.inquiry__err{font-size:.88rem;color:#ff8fa6}
+.inquiry__actions{display:flex;flex-wrap:wrap;gap:12px;padding-top:4px}
+.inquiry__actions svg{width:18px;height:18px}
+
+/* ------------------------------------------------ next steps */
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:n}
+.next__step{padding:32px 28px;border-radius:var(--radius-lg)}
+.next__n{display:block;font-family:var(--f-display);font-size:3.2rem;font-weight:600;line-height:1;letter-spacing:-.05em;margin-bottom:24px;color:transparent;-webkit-text-stroke:1px rgba(200,180,255,.55)}
+.next__step:hover .next__n{background:var(--grad-text);-webkit-background-clip:text;background-clip:text;-webkit-text-stroke:0}
+.next__step h3{margin-bottom:10px}
+.next__step p{color:var(--muted);font-size:.95rem;line-height:1.7}
+
+/* ------------------------------------------------ responsive */
+@media (max-width:980px){
+  .contact-hero__grid,.contact-grid{grid-template-columns:1fr}
+  .cube-stage{padding-top:10px}
+  .next{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .field-row{grid-template-columns:1fr}
+  .inquiry__actions .btn{width:100%}
+  .ccard b{font-size:.92rem}
+}

@@ -1,0 +1,117 @@
+/* ==========================================================================
+   JMX — creative.css  (creative.html only)
+   Parallax creative hero · auto-playing 3D reel cover flow ·
+   Garage Rooms fanned deck · horizontal scroll gallery
+   ========================================================================== */
+
+/* ------------------------------------------------ hero · floating creatives */
+.cr-hero{min-height:86vh;min-height:86svh;display:flex;align-items:center}
+.cr-hero .wrap{position:relative;z-index:2}
+.cr-hero .h-1{max-width:13ch}
+.cr-float{position:absolute;inset:0;z-index:0;pointer-events:none}
+.cr-float img{
+  position:absolute;left:var(--x);top:var(--y);width:var(--w);aspect-ratio:1;object-fit:cover;
+  border-radius:18px;border:1px solid var(--line-2);rotate:var(--r);
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.95),0 0 40px -16px rgba(122,72,254,.5);
+  animation:crIn 1.4s var(--ease) both;
+}
+.cr-float img:nth-child(2){animation-delay:.1s}.cr-float img:nth-child(3){animation-delay:.2s}.cr-float img:nth-child(4){animation-delay:.3s}.cr-float img:nth-child(5){animation-delay:.4s}
+@keyframes crIn{from{opacity:0;transform:translateY(60px) scale(.9)}}
+.cr-float::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 30%,rgba(5,5,13,.55) 55%,transparent 80%)}
+
+/* ------------------------------------------------ reels cover flow */
+.reels{padding-bottom:calc(var(--section) * .8)}
+.reelflow{position:relative;height:clamp(520px,58vw,700px);perspective:1800px;overflow:hidden;touch-action:pan-y}
+.reel{position:absolute;left:50%;top:50%;width:clamp(240px,23vw,320px);aspect-ratio:9/16;
+  transition:transform 1s var(--ease),opacity .7s,filter .7s;will-change:transform}
+.reel:not(.is-active){filter:brightness(.5) saturate(.8)}
+.reel__card{position:relative;display:block;width:100%;height:100%;border-radius:24px;overflow:hidden;background:#000;
+  border:1px solid var(--line-2);box-shadow:0 50px 100px -30px rgba(0,0,0,.95);
+  -webkit-box-reflect:below 12px linear-gradient(transparent 80%,rgba(255,255,255,.12))}
+.reel.is-active .reel__card{border-color:rgba(180,77,253,.6);box-shadow:0 50px 100px -30px rgba(74,67,254,.7)}
+.reel__poster,.reel__preview{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.reel__preview{opacity:0;transition:opacity .5s}
+.reel.is-playing .reel__preview{opacity:1}
+.reel__chip{position:absolute;left:16px;top:16px;z-index:2;padding:6px 10px;border-radius:8px;font-size:.72rem;background:rgba(5,5,13,.7);border:1px solid var(--line-2)}
+.reel__play{position:absolute;left:50%;top:50%;z-index:2;width:70px;height:70px;translate:-50% -50%;display:grid;place-items:center;border-radius:50%;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(10px);transition:transform .5s var(--ease),background .4s,opacity .4s}
+.reel__play svg{width:24px;height:24px;margin-left:3px}
+.reel.is-active .reel__card:hover .reel__play{transform:scale(1.12);background:var(--grad)}
+.reel.is-playing .reel__play{opacity:0;transform:scale(.8)}
+.reel.is-active.is-playing .reel__card:hover .reel__play{opacity:1;transform:scale(1)}
+.reel__live{position:absolute;right:14px;top:16px;z-index:2;display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border-radius:8px;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+  background:rgba(5,5,13,.7);border:1px solid var(--line-2);opacity:0;transition:opacity .4s}
+.reel__live i{width:6px;height:6px;border-radius:50%;background:#ff4d6d;box-shadow:0 0 10px #ff4d6d;animation:livePulse 1.4s ease-in-out infinite}
+@keyframes livePulse{50%{opacity:.35}}
+.reel.is-playing .reel__live{opacity:1}
+.reel__cap{position:absolute;inset:auto 0 0;z-index:2;display:grid;gap:4px;padding:60px 20px 20px;text-align:left;
+  font-family:var(--f-display);font-weight:600;font-size:1.08rem;line-height:1.25;background:linear-gradient(transparent,rgba(5,5,13,.92))}
+.reel__cap small{font-family:var(--f-mono);font-weight:400;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:#c9b8ff}
+
+/* ------------------------------------------------ Garage Rooms · fanned 3D deck */
+.garage{overflow:hidden}
+.garage__grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);gap:clamp(30px,5vw,70px);align-items:center}
+.garage__copy .h-2{margin-bottom:20px}
+.garage__angles{display:grid;gap:2px;margin:30px 0 26px;border-top:1px solid var(--line)}
+.garage__angles li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.garage__angles b{font-family:var(--f-display);font-weight:600;color:#cfe9c9}
+.garage__angles span{color:var(--muted)}
+.garage__link{margin-top:26px}
+.garage__stage{position:relative;height:clamp(420px,42vw,600px);perspective:1500px}
+.garage__deck{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .2s linear}
+.gr-card{position:absolute;left:50%;top:48%;width:clamp(170px,17vw,250px);border-radius:16px;overflow:hidden;background:#0c0b1d;border:1px solid var(--line-2);
+  box-shadow:0 40px 70px -30px rgba(0,0,0,.95);transform:translate(-50%,-50%);will-change:transform;transition:border-color .4s,box-shadow .4s}
+.gr-card img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;pointer-events:none;transition:transform 1s var(--ease)}
+.gr-card figcaption{position:absolute;inset:auto 0 0;padding:34px 12px 11px;display:grid;gap:2px;background:linear-gradient(transparent,rgba(5,5,13,.94));opacity:0;transform:translateY(8px);transition:.45s var(--ease)}
+.gr-card figcaption b{font-family:var(--f-display);font-size:.84rem;line-height:1.25}
+.gr-card figcaption span{font-size:.7rem;color:var(--muted);line-height:1.35}
+.gr-card:hover{border-color:rgba(62,224,143,.6);box-shadow:0 40px 80px -30px rgba(0,0,0,.95),0 0 40px -10px rgba(62,224,143,.45)}
+.gr-card:hover img{transform:scale(1.05)}
+.gr-card:hover figcaption{opacity:1;transform:none}
+.garage__floor{position:absolute;left:50%;bottom:2%;width:86%;height:90px;translate:-50% 0;border-radius:50%;background:radial-gradient(ellipse,rgba(62,224,143,.22),rgba(122,72,254,.18) 40%,transparent 70%);filter:blur(12px)}
+
+/* ------------------------------------------------ horizontal scroll gallery */
+.hscroll__track{position:relative;height:340vh}
+.hscroll__sticky{position:sticky;top:0;height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:center;gap:clamp(30px,4vh,50px);overflow:hidden}
+.hscroll__head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.hscroll__head .h-2{max-width:16ch}
+.hscroll__meter{display:flex;align-items:center;gap:14px;font-size:.8rem;color:var(--muted);min-width:220px}
+.hscroll__meter i{flex:1;height:2px;background:var(--line-2);border-radius:2px;overflow:hidden}
+.hscroll__meter b{display:block;height:100%;background:var(--grad);transform-origin:0 50%;transform:scaleX(0)}
+.hscroll__rail{display:flex;gap:clamp(16px,2vw,28px);padding-left:max(var(--gutter),calc((100vw - var(--max)) / 2 + var(--gutter)));will-change:transform}
+.h-card{position:relative;flex:none;width:clamp(240px,26vw,380px);border-radius:22px;overflow:hidden;background:#0c0b1d;border:1px solid var(--line-2);
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.9);transform:perspective(1200px) rotateY(var(--ry,0deg)) translateY(var(--ty,0px));transition:border-color .4s}
+.h-card:nth-child(even){--ty:40px}
+.h-card img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform 1s var(--ease)}
+.h-card:hover{border-color:rgba(180,77,253,.6)}
+.h-card:hover img{transform:scale(1.06)}
+.h-card figcaption{display:grid;gap:2px;padding:14px 18px 16px}
+.h-card figcaption b{font-family:var(--f-display);font-size:1rem}
+.h-card figcaption span{font-size:.82rem;color:var(--muted)}
+.h-card--end{display:grid;place-items:center;align-content:center;gap:18px;padding:30px;text-align:center;background:var(--grad-soft);aspect-ratio:auto}
+.h-card--end b{font-family:var(--f-display);font-size:1.6rem;letter-spacing:-.03em;line-height:1.15}
+
+/* ------------------------------------------------ responsive */
+@media (max-width:900px){
+  .cr-float{opacity:.35}
+  .cr-float::after{background:linear-gradient(180deg,rgba(5,5,13,.3),var(--bg))}
+  .cr-hero{min-height:auto}
+  .hscroll__track{height:auto!important}
+  .hscroll__sticky{position:static;height:auto;padding-block:var(--section);overflow:visible}
+  .hscroll__rail{overflow-x:auto;scroll-snap-type:x mandatory;padding-inline:var(--gutter);padding-bottom:10px;transform:none!important;scrollbar-width:none}
+  .hscroll__rail::-webkit-scrollbar{display:none}
+  .h-card{width:72vw;scroll-snap-align:center;--ty:0px!important}
+  .hscroll__meter{display:none}
+}
+@media (max-width:980px){
+  .garage__grid{grid-template-columns:1fr}
+  .garage__stage{height:440px}
+}
+@media (max-width:640px){
+  .garage__stage{height:340px;margin-inline:calc(var(--gutter) * -1)}
+  .gr-card{width:38vw}
+  .gr-card figcaption{display:none}
+  .garage__angles li{grid-template-columns:1fr;gap:2px}
+  .reelflow{height:560px}
+  .reel{width:min(64vw,280px)}
+}
