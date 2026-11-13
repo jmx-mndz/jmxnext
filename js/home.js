@@ -554,7 +554,7 @@
 
   /* ============================================================ init */
   hero3D();
-  J.reels();
+  if (J.reels) J.reels();   // needs the new js/global.js
   /* hero stat cards rise into place in 3D once the loader clears */
   J.onReady(() => { const h = $('#hstats'); if (h) setTimeout(() => h.classList.add('is-on'), 300); });
   ring3d();
