@@ -7,63 +7,7 @@
   'use strict';
   const J = window.JMX, D = window.JMX_DATA;
   if (!J || !D) return;
-  const { $, $$, clamp, lerp, esc, reduce, finePointer, isMobile } = J;
-
-  /* --- reels: 3D cover flow, every reel auto-plays muted while the
-         section is on screen; tap the front reel to watch with sound */
-  function reels() {
-    const root = $('#reelflow');
-    if (!root) return;
-    const items = $$('.reel', root), n = items.length, count = $('#reelCount');
-    let idx = Math.floor(n / 2), inView = false, modalOpen = false;
-    const layout = () => {
-      const w = items[0].offsetWidth, gap = isMobile() ? w * 0.62 : w * 0.9;
-      items.forEach((el, i) => {
-        const o = i - idx, a = Math.abs(o);
-        el.style.transform = `translate(-50%,-50%) translate3d(${o * gap}px,0,${-a * 200}px) rotateY(${clamp(-o * 32, -64, 64)}deg)`;
-        el.style.zIndex = 10 - a;
-        el.style.opacity = a > 2 ? 0 : a > 1 ? 0.55 : 1;
-        el.style.pointerEvents = a > 2 ? 'none' : 'auto';
-        el.classList.toggle('is-active', o === 0);
-      });
-      count.textContent = String(idx + 1).padStart(2, '0') + ' / ' + String(n).padStart(2, '0');
-    };
-    const go = i => { idx = clamp(i, 0, n - 1); layout(); };
-    const vid = el => $('.reel__preview', el);
-    function play(el) {
-      const v = vid(el);
-      if (!v.getAttribute('src')) { v.src = el.dataset.src; v.preload = 'auto'; }
-      v.muted = true;
-      const p = v.play();
-      if (p && p.then) p.then(() => el.classList.add('is-playing')).catch(() => {});
-      else el.classList.add('is-playing');
-    }
-    function pause(el) { const v = vid(el); if (!v.paused) v.pause(); }
-    const sync = () => items.forEach(el => (inView && !modalOpen && !reduce) ? play(el) : pause(el));
-    items.forEach(el => vid(el).addEventListener('playing', () => el.classList.add('is-playing')));
-    if ('IntersectionObserver' in window) new IntersectionObserver(([en]) => { inView = en.isIntersecting; sync(); }, { rootMargin: '120px 0px', threshold: 0.15 }).observe(root);
-    else { inView = true; sync(); }
-    document.addEventListener('visibilitychange', () => { if (document.hidden) items.forEach(pause); else sync(); });
-    document.addEventListener('jmx:modalclose', () => { modalOpen = false; sync(); });
-
-    items.forEach((el, i) => {
-      $('.reel__card', el).addEventListener('click', () => {
-        if (moved) return;
-        if (i !== idx) { go(i); return; }
-        modalOpen = true; sync();
-        J.openVideo({ src: el.dataset.src, poster: el.dataset.poster, title: el.dataset.title, desc: el.dataset.desc, tag: el.dataset.tag });
-      });
-    });
-    $('#reelPrev').addEventListener('click', () => go(idx - 1));
-    $('#reelNext').addEventListener('click', () => go(idx + 1));
-    let sx = null, moved = false;
-    root.addEventListener('pointerdown', e => { sx = e.clientX; moved = false; });
-    root.addEventListener('pointermove', e => { if (sx !== null && Math.abs(e.clientX - sx) > 12) moved = true; });
-    root.addEventListener('pointerup', e => { if (sx !== null && Math.abs(e.clientX - sx) > 50) go(idx + (e.clientX < sx ? 1 : -1)); sx = null; setTimeout(() => { moved = false; }, 0); });
-    root.addEventListener('keydown', e => { if (e.key === 'ArrowRight') go(idx + 1); if (e.key === 'ArrowLeft') go(idx - 1); });
-    window.addEventListener('resize', layout, { passive: true });
-    layout();
-  }
+  const { $, $$, clamp, lerp, esc, reduce, finePointer, isMobile } = J;  // reels live in global.js (shared with Home)
 
   /* --- Garage Rooms: a stacked deck that fans out into a 3D arc as you scroll */
   function garageDeck() {
@@ -131,7 +75,7 @@
     });
   }
 
-  reels();
+  if (J.reels) J.reels();   // needs the new js/global.js
   garageDeck();
   hscroll();
   J.gallery($('[data-gallery]'));
