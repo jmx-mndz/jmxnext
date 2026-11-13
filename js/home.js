@@ -2,6 +2,7 @@
    JMX — home.js  (index.html only)
    1. Hero: Three.js infinite portal frames + particle stream (with fallback)
    1b. 3D kinetic type ring (disciplines)
+   1c. Video reels (shared JMX.reels in global.js)
    2. Mouse-depth parallax (hero badges + floating service panels)
    3. Scroll-lit statement
    4. Selected work: scroll-driven 3D browser stack + phone
@@ -553,6 +554,7 @@
 
   /* ============================================================ init */
   hero3D();
+  J.reels();
   /* hero stat cards rise into place in 3D once the loader clears */
   J.onReady(() => { const h = $('#hstats'); if (h) setTimeout(() => h.classList.add('is-on'), 300); });
   ring3d();
